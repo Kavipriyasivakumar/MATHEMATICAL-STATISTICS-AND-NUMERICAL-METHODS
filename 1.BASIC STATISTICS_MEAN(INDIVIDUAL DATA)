@@ -1,0 +1,11 @@
+# Get values from user and calculate mean
+values = input("Enter the observations separated by spaces: ")  # eg: 25 32 28 34 24 31 36 27 29 30
+
+# Split and convert each value to int
+data = list(map(int, values.split()))
+
+# Calculate mean
+mean = sum(data) / len(data)
+
+#Print mean
+print("Mean of the data is:", mean)
