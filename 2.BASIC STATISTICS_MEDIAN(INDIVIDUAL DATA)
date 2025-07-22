@@ -1,0 +1,19 @@
+# Get input from user and find median
+values = input("Enter the observations separated by spaces: ")  # eg: 25 32 28 34 24 31 36 27 29 30
+data = list(map(int, values.split()))
+
+# Sort the data
+data.sort()
+
+#Calculate the length of the input
+n = len(data)
+
+if n % 2 == 1:
+    median = data[n // 2]  # Odd number of elements
+else:
+    mid1 = data[n // 2 - 1]
+    mid2 = data[n // 2]
+    median = (mid1 + mid2) / 2  # Even number of elements
+
+#Print Median
+print("Median of the data is:", median)
