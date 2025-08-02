@@ -1,0 +1,25 @@
+# List of numbers
+data = [320, 395, 342, 444, 451, 395, 425, 395, 425, 417, 395]
+
+# Create an empty dictionary to store frequencies
+frequency = {}
+
+# Count how many times each number appears
+for number in data:
+    if number in frequency:
+        frequency[number] += 1
+    else:
+        frequency[number] = 1
+
+# Find the highest frequency
+max_freq = max(frequency.values())
+
+# Find the number with the highest frequency 
+modes = []
+for number in frequency:
+    if frequency[number] == max_freq:
+        modes.append(number)
+
+# Print the result
+print("Mode(s):", modes)
+print("It appears", max_freq, "times")
